@@ -238,9 +238,9 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 <div><div class="eyebrow rv">Contato</div><h2 class="rv">Fale com a Link Telecom</h2>
 <div class="info rv"><div><b>WhatsApp</b>(34) 0000-0000</div><div><b>E-mail</b>contato@seudominio.com.br</div><div><b>Endereço</b>Uberlândia, MG</div></div></div>
 <form class="rv" id="f">
-<div class="row"><label>Nome<input name="n" required autocomplete="name"></label><label>Provedor<input name="p"></label></div>
-<div class="row"><label>Cidade<input name="c"></label><label>Quantas O.S. por mês, em média?<input name="os" inputmode="numeric" placeholder="Ex.: 120"></label></div>
-<label>Qual o maior gargalo hoje?<select name="g"><option value="">Selecione</option><option>Fila de instalação</option><option>Retrabalho</option><option>Madrugada</option><option>Custo de equipe</option></select></label>
+<div class="row"><label>Nome<input name="n" required autocomplete="name"></label><label>Telefone ou WhatsApp<input name="t" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(34) 90000-0000"></label></div>
+<div class="row"><label>Provedor<input name="p"></label><label>Cidade<input name="c"></label></div>
+<div class="row"><label>Quantas O.S. por mês, em média?<input name="os" inputmode="numeric" placeholder="Ex.: 120"></label><label>Qual o maior gargalo hoje?<select name="g"><option value="">Selecione</option><option>Fila de instalação</option><option>Retrabalho</option><option>Madrugada</option><option>Custo de equipe</option></select></label></div>
 <label>Mensagem<textarea name="m"></textarea></label>
 <button class="btn p" type="submit">Pedir diagnóstico pelo WhatsApp</button>
 </form></div></section>
@@ -259,7 +259,7 @@ document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay
 var sh=[].slice.call(document.querySelectorAll('.shape')),tk=false;
 window.addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){var y=window.scrollY;sh.forEach(function(s){var k=parseFloat(s.dataset.sp);s.style.transform='translate3d(0,'+(y*k*-3)+'px,0) rotate('+(y*k*20)+'deg)'});tk=false})},{passive:true});
 if(matchMedia('(hover:hover)').matches){document.querySelectorAll('.card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(900px) rotateY('+x*10+'deg) rotateX('+-y*10+'deg) translateZ(8px)'});c.addEventListener('mouseleave',function(){c.style.transform=''})})}
-document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var d=new FormData(e.target);var t='Olá, vim pelo site da Link Telecom.\nNome: '+d.get('n')+'\nProvedor: '+d.get('p')+'\nCidade: '+d.get('c')+'\nO.S. por mês: '+d.get('os')+'\nMaior gargalo: '+d.get('g')+'\nMensagem: '+d.get('m');window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank')});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var d=new FormData(e.target);var t='Olá, vim pelo site da Link Telecom.\nNome: '+d.get('n')+'\nTelefone: '+d.get('t')+'\nProvedor: '+d.get('p')+'\nCidade: '+d.get('c')+'\nO.S. por mês: '+d.get('os')+'\nMaior gargalo: '+d.get('g')+'\nMensagem: '+d.get('m');window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank')});
 })();
 </script>
 </body>
