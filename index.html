@@ -149,7 +149,7 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 <h1 class="rv">A operação técnica do seu provedor, com <em>padrão que você consegue auditar</em></h1>
 <p class="lead rv">Técnicos de fibra, técnicos de rede e monitoramento NOC. Toda O.S. fecha com foto, potência medida e prazo cumprido. Você vende, nós executamos.</p>
 <div class="cta rv"><a class="btn p" href="#contato">Pedir diagnóstico da minha operação</a><a class="btn o" href="#padrao">Ver o Padrão Link Telecom</a></div>
-<p class="micro rv">Conversa de 20 min pelo WhatsApp</p>
+<p class="micro rv">Uma reunião para entender a realidade da sua operação</p>
 </div></div>
 
 <section id="dores" class="alt"><div class="wrap">
@@ -216,9 +216,9 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 <div class="eyebrow rv">Como começar</div>
 <h2 class="rv">Três passos, sem enrolação</h2>
 <div class="steps3">
-<div class="rv"><b>01</b><h3>Diagnóstico</h3><p>Uma conversa de 20 minutos sobre o seu volume, o seu maior gargalo e a sua rede.</p></div>
+<div class="rv"><b>01</b><h3>Diagnóstico</h3><p>Uma conversa de verdade para entender a sua realidade: o seu volume, o seu maior gargalo, a sua rede e a qualidade da sua base de clientes.</p></div>
 <div class="rv"><b>02</b><h3>Proposta</h3><p>Uma reunião para apresentar a proposta para a sua operação. A gente sai dela com um sim ou um não.</p></div>
-<div class="rv"><b>03</b><h3>Primeiros 3 meses</h3><p>Uma operação com fila de O.S. acumulada e processo entupido precisa de tempo para ser reorganizada. Em 3 meses você sente o fluxo andando e a operação saindo do sufoco.</p></div>
+<div class="rv"><b>03</b><h3>Parceria de longo prazo</h3><p>A gente não entra só para desentupir a fila de O.S. e ir embora. Uma operação leva tempo para ser reorganizada, e a ideia é ficar do seu lado, acompanhando o dia a dia e ajudando o seu provedor a crescer com uma base de clientes de qualidade.</p></div>
 </div>
 <div class="cta rv" style="margin-top:48px"><a class="btn p" href="#contato">Pedir diagnóstico da minha operação</a></div>
 </div></section>
@@ -232,7 +232,7 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 <div class="pin rv"><div><span class="dot"></span><strong>Uberlândia</strong><small>Minas Gerais e região</small></div></div>
 </div></section>
 
-<section><div class="wrap"><div class="band rv"><h2>Continue apagando incêndio ou resolva isso de vez com o Padrão Link Telecom</h2><p>Você pode seguir com a equipe que tem, ou conversar com a gente e ver como ficaria a sua operação com o Padrão Link Telecom. A conversa leva 20 minutos.</p><a class="btn" href="#contato">Pedir diagnóstico da minha operação</a></div></div></section>
+<section><div class="wrap"><div class="band rv"><h2>Continue apagando incêndio ou resolva isso de vez com o Padrão Link Telecom</h2><p>Você pode seguir com a equipe que tem, ou conversar com a gente e ver como ficaria a sua operação com o Padrão Link Telecom. Primeiro a gente entende a sua realidade.</p><a class="btn" href="#contato">Pedir diagnóstico da minha operação</a></div></div></section>
 
 <section id="contato" class="alt"><div class="wrap contact">
 <div><div class="eyebrow rv">Contato</div><h2 class="rv">Fale com a Link Telecom</h2>
@@ -242,7 +242,8 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 <div class="row"><label>Provedor<input name="p"></label><label>Cidade<input name="c"></label></div>
 <div class="row"><label>Quantas O.S. por mês, em média?<input name="os" inputmode="numeric" placeholder="Ex.: 120"></label><label>Qual o maior gargalo hoje?<select name="g"><option value="">Selecione</option><option>Fila de instalação</option><option>Retrabalho</option><option>Madrugada</option><option>Custo de equipe</option></select></label></div>
 <label>Mensagem<textarea name="m"></textarea></label>
-<button class="btn p" type="submit">Pedir diagnóstico pelo WhatsApp</button>
+<button class="btn p" type="submit">Quero agendar o diagnóstico</button>
+<p class="micro">A gente retorna pelo WhatsApp para marcar a reunião.</p>
 </form></div></section>
 </main>
 
@@ -259,7 +260,7 @@ document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay
 var sh=[].slice.call(document.querySelectorAll('.shape')),tk=false;
 window.addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){var y=window.scrollY;sh.forEach(function(s){var k=parseFloat(s.dataset.sp);s.style.transform='translate3d(0,'+(y*k*-3)+'px,0) rotate('+(y*k*20)+'deg)'});tk=false})},{passive:true});
 if(matchMedia('(hover:hover)').matches){document.querySelectorAll('.card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(900px) rotateY('+x*10+'deg) rotateX('+-y*10+'deg) translateZ(8px)'});c.addEventListener('mouseleave',function(){c.style.transform=''})})}
-document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var d=new FormData(e.target);var t='Olá, vim pelo site da Link Telecom.\nNome: '+d.get('n')+'\nTelefone: '+d.get('t')+'\nProvedor: '+d.get('p')+'\nCidade: '+d.get('c')+'\nO.S. por mês: '+d.get('os')+'\nMaior gargalo: '+d.get('g')+'\nMensagem: '+d.get('m');window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank')});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var d=new FormData(e.target);var t='Olá, vim pelo site da Link Telecom e gostaria de agendar uma reunião de diagnóstico.\nNome: '+d.get('n')+'\nTelefone: '+d.get('t')+'\nProvedor: '+d.get('p')+'\nCidade: '+d.get('c')+'\nO.S. por mês: '+d.get('os')+'\nMaior gargalo: '+d.get('g')+'\nMensagem: '+d.get('m');window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank')});
 })();
 </script>
 </body>
