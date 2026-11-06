@@ -90,7 +90,7 @@ textarea{min-height:110px;resize:vertical}
 footer{border-top:1px solid var(--line);padding:56px 0 40px;color:var(--mut);font-size:14px}
 .ft{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:center}
 .ft img{height:56px;display:block}
-.ft nav{display:flex;gap:28px}
+.ft nav{display:flex;flex-wrap:wrap;gap:10px 24px}
 .cp{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
 .rv{opacity:0;transform:perspective(900px) rotateX(16deg) translateY(48px);transform-origin:50% 100%;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -135,7 +135,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;color:var(--mut);fon
 .steps3 p{color:var(--mut);font-size:15px}
 .micro{margin-top:18px;font-size:14px;color:var(--mut)}
 select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:13px 14px;width:100%}
-@media (max-width:900px){.obj,.steps3{grid-template-columns:1fr}.tbl{display:block;overflow-x:auto}}
+@media (max-width:900px){.obj,.steps3{grid-template-columns:1fr}}
+@media (max-width:900px){.tbl{display:block;overflow:visible;border:0;background:none;border-radius:0}.tbl thead{display:none}.tbl tbody{display:block}.tbl tr{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;padding:4px 0 6px;overflow:hidden}.tbl td{display:block;border:0;padding:8px 18px;white-space:normal}.tbl td:first-child{color:var(--ort);padding-top:14px;font-size:17px}.tbl td[data-l]::before{content:attr(data-l);display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:2px;font-weight:600}.tbl td.hl{background:rgba(253,101,22,.12)}}
+@media (max-width:900px){.shape{opacity:.13!important}}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -177,10 +179,10 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 <h2 class="rv">Padrão Link Telecom: cada serviço tem começo, meio e comprovação</h2>
 <p class="sub rv">Em vez de pedir que você confie, a gente mostra o que foi feito.</p>
 <table class="tbl rv"><thead><tr><th>Etapa</th><th>Campo</th><th>NOC</th></tr></thead><tbody>
-<tr><td>1. Recebe</td><td>Você abre a O.S. e a gente combina o prazo</td><td>A gente detecta o alarme no monitoramento</td></tr>
-<tr><td>2. Executa</td><td>Nosso técnico instala ou repara no padrão de acabamento</td><td>A gente diagnostica e trata o problema</td></tr>
-<tr><td>3. Comprova</td><td>Foto da CTO e da ONU, potência em dBm e checklist</td><td>Incidente registrado, com horário</td></tr>
-<tr><td>4. Fecha</td><td>Você recebe o relatório da O.S.</td><td>A gente chama a equipe de campo, se precisar</td></tr>
+<tr><td>1. Recebe</td><td data-l="Campo">Você abre a O.S. e a gente combina o prazo</td><td data-l="NOC">A gente detecta o alarme no monitoramento</td></tr>
+<tr><td>2. Executa</td><td data-l="Campo">Nosso técnico instala ou repara no padrão de acabamento</td><td data-l="NOC">A gente diagnostica e trata o problema</td></tr>
+<tr><td>3. Comprova</td><td data-l="Campo">Foto da CTO e da ONU, potência em dBm e checklist</td><td data-l="NOC">Incidente registrado, com horário</td></tr>
+<tr><td>4. Fecha</td><td data-l="Campo">Você recebe o relatório da O.S.</td><td data-l="NOC">A gente chama a equipe de campo, se precisar</td></tr>
 </tbody></table>
 <p class="anchor rv">Se não tem foto e medição, a O.S. <em>não está fechada.</em></p>
 </div></section>
@@ -211,11 +213,11 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 <div class="eyebrow rv">Comparativo</div>
 <h2 class="rv">Equipe própria × empresa de terceirização comum × Link Telecom</h2>
 <table class="tbl rv"><thead><tr><th></th><th>Equipe própria</th><th>Empresa de terceirização comum</th><th class="hl">Link Telecom</th></tr></thead><tbody>
-<tr><td>Custo fixo</td><td>Salários, encargos, veículo e ferramentas todo mês</td><td>Varia por contrato</td><td class="hl">Você paga pela demanda, não pela ociosidade</td></tr>
-<tr><td>Escala em pico</td><td>Limitada ao tamanho do time</td><td>Depende da disponibilidade deles</td><td class="hl">Combinada no diagnóstico</td></tr>
-<tr><td>Comprovação por O.S.</td><td>Depende do seu controle interno</td><td>Raramente</td><td class="hl">Foto, potência e relatório</td></tr>
-<tr><td>Cobertura de madrugada</td><td>Exige plantão próprio</td><td>Normalmente não inclui</td><td class="hl">Monitoramento NOC da rede</td></tr>
-<tr><td>Risco trabalhista</td><td>Todo seu</td><td>Varia por contrato</td><td class="hl">Definido em contrato</td></tr>
+<tr><td>Custo fixo</td><td data-l="Equipe própria">Salários, encargos, veículo e ferramentas todo mês</td><td data-l="Empresa de terceirização comum">Varia por contrato</td><td data-l="Link Telecom" class="hl">Você paga pela demanda, não pela ociosidade</td></tr>
+<tr><td>Escala em pico</td><td data-l="Equipe própria">Limitada ao tamanho do time</td><td data-l="Empresa de terceirização comum">Depende da disponibilidade deles</td><td data-l="Link Telecom" class="hl">Combinada no diagnóstico</td></tr>
+<tr><td>Comprovação por O.S.</td><td data-l="Equipe própria">Depende do seu controle interno</td><td data-l="Empresa de terceirização comum">Raramente</td><td data-l="Link Telecom" class="hl">Foto, potência e relatório</td></tr>
+<tr><td>Cobertura de madrugada</td><td data-l="Equipe própria">Exige plantão próprio</td><td data-l="Empresa de terceirização comum">Normalmente não inclui</td><td data-l="Link Telecom" class="hl">Monitoramento NOC da rede</td></tr>
+<tr><td>Risco trabalhista</td><td data-l="Equipe própria">Todo seu</td><td data-l="Empresa de terceirização comum">Varia por contrato</td><td data-l="Link Telecom" class="hl">Definido em contrato</td></tr>
 </tbody></table>
 </div></section>
 
