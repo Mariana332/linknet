@@ -39,10 +39,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#F
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(253,101,22,.32) 1.4px,transparent 1.6px);background-size:34px 34px;-webkit-mask-image:radial-gradient(700px 420px at 85% 30%,#000,transparent 75%);mask-image:radial-gradient(700px 420px at 85% 30%,#000,transparent 75%)}
 .hero .wrap{position:relative;z-index:2;max-width:1180px}
 .hero .wrap>*{max-width:690px}
-.hero-photo{position:absolute;z-index:1;right:max(3vw,calc((100vw - 1320px)/2));top:50%;transform:translateY(-50%);width:min(43vw,560px);height:470px;border-radius:26px;overflow:hidden;box-shadow:0 28px 70px rgba(30,28,27,.2)}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,28,27,.06),rgba(30,28,27,.12))}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
-@media(max-width:900px){.hero{padding:72px 0 60px}.hero-photo{position:relative;top:auto;right:auto;transform:none;width:calc(100% - 48px);height:230px;margin:34px auto 0;border-radius:18px}.hero .wrap>*{max-width:100%}}
+@media(max-width:900px){.hero .wrap>*{max-width:100%}}
 .tag{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ort);border:1px solid rgba(200,75,8,.4);padding:8px 16px;border-radius:99px;margin-bottom:28px}
 h1{font-size:clamp(38px,6vw,76px);font-weight:800;max-width:860px}
 h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -162,7 +159,7 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 <div class="cta rv"><a class="btn p" href="#contato">Pedir diagnóstico da minha operação</a><a class="btn o" href="#padrao">Ver o Padrão Link Telecom</a></div>
 <p class="micro rv">Uma reunião para entender a realidade da sua operação</p>
 </div>
-<div class="hero-photo" aria-hidden="true"><img src="https://www.calix.com/solutions/jcr%3Acontent/root/container/tabs/item_1/callout_grid/item_1701107234940.coreimg.jpeg/1784661808756/cable-technician.jpeg" alt="Técnico realizando manutenção em rede de fibra óptica"></div>
+
 </div>
 
 <section id="dores" class="alt"><div class="wrap">
