@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.calix.com; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Link Telecom — Operação técnica para provedores</title>
@@ -42,7 +42,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#F
 .hero-photo{position:absolute;z-index:1;right:max(3vw,calc((100vw - 1320px)/2));top:50%;transform:translateY(-50%);width:min(43vw,560px);height:470px;border-radius:26px;overflow:hidden;box-shadow:0 28px 70px rgba(30,28,27,.2)}
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,28,27,.06),rgba(30,28,27,.12))}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
-@media(max-width:900px){.hero{padding:72px 0 60px}.hero-photo{position:relative;top:auto;right:auto;transform:none;width:calc(100% - 48px);height:260px;margin:36px auto 0;border-radius:18px}.hero .wrap>*{max-width:100%}}
+@media(max-width:900px){.hero{padding:72px 0 60px}.hero-photo{position:relative;top:auto;right:auto;transform:none;width:calc(100% - 48px);height:230px;margin:34px auto 0;border-radius:18px}.hero .wrap>*{max-width:100%}}
 .tag{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ort);border:1px solid rgba(200,75,8,.4);padding:8px 16px;border-radius:99px;margin-bottom:28px}
 h1{font-size:clamp(38px,6vw,76px);font-weight:800;max-width:860px}
 h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -155,14 +155,15 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 
 <main id="topo">
 <div class="hero">
-<div class="hero-photo" aria-hidden="true"><img src="https://www.calix.com/solutions/jcr%3Acontent/root/container/tabs/item_1/callout_grid/item_1701107234940.coreimg.jpeg/1784661808756/cable-technician.jpeg" alt="Técnico realizando manutenção em rede de fibra óptica"></div>
 <div class="wrap">
 <span class="tag rv">Soluções para provedores</span>
 <h1 class="rv">A operação técnica do seu provedor, com <em>padrão que você consegue auditar</em></h1>
 <p class="lead rv">Técnicos de fibra, técnicos de rede e monitoramento NOC. Toda O.S. fecha com foto, potência medida e prazo cumprido. Você vende, nós executamos.</p>
 <div class="cta rv"><a class="btn p" href="#contato">Pedir diagnóstico da minha operação</a><a class="btn o" href="#padrao">Ver o Padrão Link Telecom</a></div>
 <p class="micro rv">Uma reunião para entender a realidade da sua operação</p>
-</div></div>
+</div>
+<div class="hero-photo" aria-hidden="true"><img src="https://www.calix.com/solutions/jcr%3Acontent/root/container/tabs/item_1/callout_grid/item_1701107234940.coreimg.jpeg/1784661808756/cable-technician.jpeg" alt="Técnico realizando manutenção em rede de fibra óptica"></div>
+</div>
 
 <section id="dores" class="alt"><div class="wrap">
 <div class="eyebrow rv">Você se reconhece?</div>
