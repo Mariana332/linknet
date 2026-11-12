@@ -140,6 +140,16 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 @media (max-width:900px){.obj,.steps3{grid-template-columns:1fr}}
 @media (max-width:900px){.tbl{display:block;overflow:visible;border:0;background:none;border-radius:0}.tbl thead{display:none}.tbl tbody{display:block}.tbl tr{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;padding:4px 0 6px;overflow:hidden}.tbl td{display:block;border:0;padding:8px 18px;white-space:normal}.tbl td:first-child{color:var(--ort);padding-top:14px;font-size:17px}.tbl td[data-l]::before{content:attr(data-l);display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:2px;font-weight:600}.tbl td.hl{background:rgba(253,101,22,.12)}}
 @media (max-width:900px){.shape{opacity:.13!important}}
+.callout{display:grid;grid-template-columns:1fr 1.5fr;margin-top:56px;border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px rgba(30,28,27,.07)}
+.co-head{background:var(--grad);color:#fff;padding:44px 40px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.co-tag{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
+.co-head h3{font-size:clamp(26px,3vw,36px);line-height:1.15}
+.co-list{list-style:none;padding:36px 40px;display:grid;gap:0;align-content:center}
+.co-list li{position:relative;padding:18px 0 18px 36px;border-bottom:1px solid var(--line);font-size:17px;line-height:1.6;color:var(--mut)}
+.co-list li:last-child{border-bottom:0}
+.co-list li::before{content:"";position:absolute;left:4px;top:27px;width:10px;height:10px;background:var(--or);border-radius:2px;transform:rotate(45deg)}
+.co-list b{color:var(--tx);font-weight:600}
+@media (max-width:900px){.callout{grid-template-columns:1fr}.co-head{padding:32px 28px}.co-list{padding:20px 24px}.co-list li{font-size:16px}}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -172,7 +182,14 @@ select{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(-
 <li class="rv">A instalação voltou em 7 dias com potência ruim. Retrabalho pago duas vezes.</li>
 <li class="rv">Você virou o técnico do seu próprio provedor.</li>
 </ul>
-<p class="say rv"><b>Não é falta de esforço seu.</b> Provedor regional cresce mais rápido do que uma equipe própria consegue acompanhar. Contratar mais gente é caro e lento, e muita empresa de terceirização vira caixa-preta: o técnico vai, volta, e você nunca fica sabendo o que foi feito no poste.</p>
+<div class="callout rv">
+<div class="co-head"><span class="co-tag">A boa notícia</span><h3>Não é falta de esforço seu.</h3></div>
+<ul class="co-list">
+<li><b>Seu provedor cresce mais rápido</b> do que uma equipe própria consegue acompanhar.</li>
+<li><b>Contratar mais gente é caro e lento.</b></li>
+<li><b>Muita empresa de terceirização vira caixa-preta:</b> o técnico vai, volta, e você nunca fica sabendo o que foi feito no poste.</li>
+</ul>
+</div>
 </div></section>
 
 <section id="padrao" class="dk"><div class="wrap">
